@@ -1,53 +1,27 @@
-# open-knesset-backend
+# Open Knesset Backend
 
-## Local Development
+An open-source API providing access to Israeli Knesset (Parliament) data.
 
-### Prerequisites
+## What is this?
 
-* Python 3.10+
+This project makes Israeli parliamentary data freely accessible to everyone. It provides a clean, organized way to access information about:
 
-### install:
+- **Members of Knesset** — Current and past representatives, their roles, and activities
+- **Bills & Legislation** — Proposed laws, their status, and voting history
+- **Votes** — How members voted on various issues
+- **Committees** — Parliamentary committees and their work
+- **Plenum Sessions** — Full assembly meetings and discussions
+- **Laws** — Enacted legislation
+- **Lobbyists** — Registered lobbyists and their activities
 
-python -m venv venv
+## Why does this matter?
 
-### windows:
+Transparency in government is essential for democracy. This API enables:
 
-venv\Scripts\activate
+- **Journalists** to investigate legislative patterns and voting behavior
+- **Researchers** to analyze parliamentary data at scale
+- **Civic organizations** to build tools that inform citizens
+- **Developers** to create applications that make government more accessible
+- **Citizens** to understand what their representatives are doing
 
-### macos:
 
-. venv/bin/activate
-
-### install all requirements:
-
-pip install -r requirements.txt
-
-### create file .env:
-
-OKNESSET_DB_USER="USER NAME"
-OKNESSET_DB_PASSWORD="PASSWORD"
-OKNESSET_DB_HOST="HOST"
-OKNESSET_DB_PORT="PORT"
-OKNESSET_DB_NAME="postgres"
-
-### execute:
-
-uvicorn main:app --reload
-
-## Running using Docker
-
-This is the same way the app is run in production.
-
-Create the `.env` file as described above.
-
-Build:
-
-```
-docker build -t open-knesset-backend .
-```
-
-Run:
-
-```
-docker run --env-file .env -p 8000:80 open-knesset-backend
-```
